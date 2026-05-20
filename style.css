@@ -465,6 +465,15 @@ html { background: var(--cream); }
   background: var(--white);
 }
 
+/* On gold card, match checkbox bg to card background */
+.price-card--featured .price-card__features li {
+  border-bottom-color: rgba(0,0,0,0.15);
+}
+.price-card--featured .check-box {
+  background: #E8A820 !important;
+  border-color: var(--black);
+}
+
 /* ================================================
    CTA SECTION
    ================================================ */
@@ -482,6 +491,7 @@ html { background: var(--cream); }
 .cta-anchor {
   font-size: 44px;
   margin-bottom: 20px;
+  color: var(--white);
 }
 
 .cta-title {
