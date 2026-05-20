@@ -1,0 +1,536 @@
+/* ================================================
+   ConRazones — Retro Psychology Landing Page
+   ================================================ */
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --cream: #F5F0E3;
+  --red:   #C41230;
+  --teal:  #1A6B6A;
+  --gold:  #E8A820;
+  --black: #111111;
+  --white: #FFFFFF;
+  --gray:  #888888;
+  --shadow: 4px 4px 0px var(--black);
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: 'Lato', sans-serif;
+  background: var(--cream);
+  color: var(--black);
+  max-width: 520px;
+  margin: 0 auto;
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+/* Full-viewport cream bg on desktop */
+html { background: var(--cream); }
+
+/* ================================================
+   ANNOUNCEMENT BAR
+   ================================================ */
+
+.announcement-bar {
+  background: var(--black);
+  color: var(--white);
+  text-align: center;
+  padding: 10px 16px;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+}
+
+/* ================================================
+   HEADER
+   ================================================ */
+
+.site-header {
+  background: var(--cream);
+  padding: 18px 24px;
+  border-bottom: 2.5px solid var(--black);
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.logo-mark {
+  width: 48px;
+  height: 48px;
+  background: var(--red);
+  color: var(--white);
+  font-family: 'Playfair Display', serif;
+  font-size: 22px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid var(--black);
+  flex-shrink: 0;
+}
+
+.logo-name {
+  font-family: 'Playfair Display', serif;
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--black);
+}
+
+/* ================================================
+   HERO
+   ================================================ */
+
+.hero {
+  background-color: var(--cream);
+  background-image: radial-gradient(circle, rgba(0,0,0,0.09) 1.5px, transparent 1.5px);
+  background-size: 22px 22px;
+  padding: 64px 24px 72px;
+  border-bottom: 3px solid var(--black);
+  text-align: center;
+}
+
+.hero-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.hero-badge {
+  display: inline-block;
+  background: var(--gold);
+  color: var(--black);
+  font-size: 10px;
+  font-weight: 900;
+  letter-spacing: 0.25em;
+  padding: 9px 22px;
+  border: 2px solid var(--black);
+  box-shadow: var(--shadow);
+  margin-bottom: 28px;
+}
+
+.hero-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 72px;
+  font-weight: 900;
+  color: var(--red);
+  line-height: 1;
+  letter-spacing: -0.01em;
+  margin-bottom: 16px;
+}
+
+.hero-sub {
+  font-size: 16px;
+  font-weight: 400;
+  color: var(--black);
+  margin-bottom: 10px;
+}
+
+.hero-tagline {
+  font-family: 'Playfair Display', serif;
+  font-size: 20px;
+  font-style: italic;
+  color: var(--teal);
+  margin-bottom: 36px;
+}
+
+.hero-pills {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 12px 20px;
+  margin-top: 28px;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  color: var(--black);
+}
+
+/* ================================================
+   BUTTONS
+   ================================================ */
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 15px 28px;
+  font-family: 'Lato', sans-serif;
+  font-size: 13px;
+  font-weight: 900;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  text-decoration: none;
+  border: 2px solid var(--black);
+  cursor: pointer;
+  transition: transform 0.08s, box-shadow 0.08s;
+  user-select: none;
+}
+
+.btn:active {
+  transform: translate(4px, 4px);
+  box-shadow: none !important;
+}
+
+.btn--large {
+  padding: 18px 32px;
+  font-size: 14px;
+  width: 100%;
+  max-width: 400px;
+}
+
+.btn--block {
+  width: 100%;
+  display: flex;
+}
+
+.btn--red  { background: var(--red);   color: var(--white); box-shadow: 5px 5px 0px var(--black); }
+.btn--teal { background: var(--teal);  color: var(--white); box-shadow: 5px 5px 0px var(--black); }
+.btn--dark { background: var(--black); color: var(--white); box-shadow: 5px 5px 0px rgba(0,0,0,0.3); }
+.btn--gold { background: var(--gold);  color: var(--black); box-shadow: 5px 5px 0px rgba(0,0,0,0.45); }
+
+.btn-icon {
+  width: 18px;
+  height: 18px;
+  flex-shrink: 0;
+}
+
+/* ================================================
+   SHARED
+   ================================================ */
+
+.container { width: 100%; }
+
+.eyebrow {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.35em;
+  text-align: center;
+  text-transform: uppercase;
+  margin-bottom: 12px;
+}
+
+.eyebrow--red  { color: var(--red); }
+.eyebrow--gold { color: var(--gold); }
+
+.section-heading {
+  font-family: 'Playfair Display', serif;
+  font-size: 40px;
+  font-weight: 700;
+  text-align: center;
+  line-height: 1.15;
+  margin-bottom: 16px;
+  color: var(--black);
+}
+
+.section-heading--white { color: var(--white); }
+
+.section-body {
+  text-align: center;
+  color: var(--gray);
+  font-size: 15px;
+  line-height: 1.7;
+  max-width: 360px;
+  margin: 0 auto 40px;
+}
+
+/* ================================================
+   APPROACH / ENFOQUE
+   ================================================ */
+
+.approach {
+  background: var(--cream);
+  padding: 64px 24px;
+}
+
+.method-card {
+  border: 2px solid var(--black);
+  box-shadow: var(--shadow);
+  margin-bottom: 20px;
+  overflow: hidden;
+}
+
+.method-card__header {
+  padding: 24px 22px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.method-card__header--red  { background: var(--red);  color: var(--white); }
+.method-card__header--teal { background: var(--teal); color: var(--white); }
+
+.method-card__label {
+  display: block;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.25em;
+  opacity: 0.85;
+  margin-bottom: 6px;
+}
+
+.method-card__title {
+  font-family: 'Playfair Display', serif;
+  font-size: 28px;
+  font-weight: 400;
+  line-height: 1.2;
+}
+
+.method-card__icon { flex-shrink: 0; opacity: 0.85; }
+
+.method-card__body {
+  background: var(--white);
+  padding: 22px;
+  font-size: 15px;
+  line-height: 1.75;
+  color: #333;
+  border-top: 2px solid var(--black);
+}
+
+.quote-block {
+  background: var(--gold);
+  border: 2px solid var(--black);
+  box-shadow: var(--shadow);
+  padding: 32px 28px;
+  font-family: 'Playfair Display', serif;
+  font-size: 21px;
+  line-height: 1.55;
+  text-align: center;
+  font-style: normal;
+  color: var(--black);
+  margin-top: 4px;
+}
+
+.quote-accent { color: var(--red); font-style: normal; }
+
+/* ================================================
+   SPECIALTIES
+   ================================================ */
+
+.specialties {
+  background: var(--teal);
+  padding: 64px 24px;
+  border-top: 3px solid var(--black);
+  border-bottom: 3px solid var(--black);
+}
+
+.specialty-card {
+  background: var(--cream);
+  border: 2px solid var(--black);
+  box-shadow: var(--shadow);
+  padding: 28px 26px;
+  margin-bottom: 18px;
+}
+
+.specialty-card__icon {
+  width: 60px;
+  height: 60px;
+  background: var(--gold);
+  border: 2px solid var(--black);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 18px;
+}
+
+.specialty-card__age {
+  display: block;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.25em;
+  color: var(--red);
+  margin-bottom: 6px;
+}
+
+.specialty-card__title {
+  font-family: 'Playfair Display', serif;
+  font-size: 32px;
+  font-weight: 400;
+  margin-bottom: 12px;
+  color: var(--black);
+}
+
+.specialty-card__desc {
+  font-size: 15px;
+  line-height: 1.65;
+  color: #444;
+  margin-bottom: 20px;
+}
+
+.specialty-card__link {
+  font-size: 11px;
+  font-weight: 900;
+  letter-spacing: 0.15em;
+  color: var(--black);
+  text-decoration: none;
+  border-bottom: 2px solid var(--black);
+  padding-bottom: 2px;
+  transition: opacity 0.2s;
+}
+
+.specialty-card__link:hover { opacity: 0.6; }
+
+/* ================================================
+   PRICING
+   ================================================ */
+
+.pricing {
+  padding: 64px 24px;
+  background: var(--cream);
+}
+
+.price-card {
+  background: var(--white);
+  border: 2px solid var(--black);
+  box-shadow: var(--shadow);
+  padding: 28px 26px;
+  margin-bottom: 20px;
+}
+
+.price-card--featured { background: var(--gold); }
+
+.price-card__badge {
+  display: inline-block;
+  background: var(--red);
+  color: var(--white);
+  font-size: 9px;
+  font-weight: 900;
+  letter-spacing: 0.2em;
+  padding: 5px 12px;
+  margin-bottom: 14px;
+}
+
+.price-card__name {
+  font-family: 'Playfair Display', serif;
+  font-size: 26px;
+  font-weight: 400;
+  margin-bottom: 12px;
+  color: var(--black);
+}
+
+.price-card__amount {
+  font-family: 'Playfair Display', serif;
+  font-size: 52px;
+  font-weight: 700;
+  color: var(--red);
+  line-height: 1;
+}
+
+.price-card__period {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  color: var(--gray);
+  margin-top: 4px;
+  margin-bottom: 22px;
+}
+
+.price-card__features {
+  list-style: none;
+  margin-bottom: 24px;
+}
+
+.price-card__features li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 15px;
+  padding: 9px 0;
+  border-bottom: 1px solid rgba(0,0,0,0.1);
+  color: var(--black);
+}
+
+.price-card__features li:last-child { border-bottom: none; }
+
+.check-box {
+  width: 20px;
+  height: 20px;
+  border: 2px solid var(--black);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  background: var(--white);
+}
+
+/* ================================================
+   CTA SECTION
+   ================================================ */
+
+.cta-section {
+  background: var(--red);
+  background-image: radial-gradient(circle, rgba(255,255,255,0.07) 1.5px, transparent 1.5px);
+  background-size: 22px 22px;
+  padding: 72px 24px;
+  text-align: center;
+  border-top: 3px solid var(--black);
+  border-bottom: 3px solid var(--black);
+}
+
+.cta-anchor {
+  font-size: 44px;
+  margin-bottom: 20px;
+}
+
+.cta-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 48px;
+  font-weight: 700;
+  color: var(--white);
+  margin-bottom: 16px;
+  line-height: 1.1;
+}
+
+.cta-body {
+  font-size: 16px;
+  line-height: 1.65;
+  color: rgba(255,255,255,0.88);
+  max-width: 340px;
+  margin: 0 auto 36px;
+}
+
+/* ================================================
+   FOOTER
+   ================================================ */
+
+.site-footer {
+  background: var(--black);
+  color: var(--white);
+  text-align: center;
+  padding: 44px 24px;
+}
+
+.footer-brand {
+  font-family: 'Playfair Display', serif;
+  font-size: 28px;
+  font-weight: 400;
+  margin-bottom: 12px;
+}
+
+.footer-copy {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.25em;
+  color: rgba(255,255,255,0.5);
+}
+
+/* ================================================
+   RESPONSIVE
+   ================================================ */
+
+@media (min-width: 768px) {
+  body { max-width: 600px; }
+  .hero-title { font-size: 84px; }
+}
