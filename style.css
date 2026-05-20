@@ -144,6 +144,15 @@ html { background: var(--cream); }
   font-size: 20px;
   font-style: italic;
   color: var(--teal);
+  margin-bottom: 14px;
+}
+
+.hero-location {
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  color: var(--gray);
+  text-transform: uppercase;
   margin-bottom: 36px;
 }
 
@@ -529,7 +538,20 @@ html { background: var(--cream); }
   font-family: 'Playfair Display', serif;
   font-size: 28px;
   font-weight: 400;
-  margin-bottom: 12px;
+  margin-bottom: 8px;
+}
+
+.footer-tagline {
+  font-size: 14px;
+  color: rgba(255,255,255,0.85);
+  margin-bottom: 6px;
+}
+
+.footer-services {
+  font-size: 11px;
+  color: rgba(255,255,255,0.55);
+  margin-bottom: 18px;
+  line-height: 1.7;
 }
 
 .footer-copy {
